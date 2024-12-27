@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Create a dataset
+data = {
+    "Month": ["January", "January", "January", "February", "February", "February", "March", "March", "March"],
+    "Region": ["North", "East", "West", "North", "East", "West", "North", "East", "West"],
+    "Product": ["Electronics", "Clothing", "Furniture", "Clothing", "Furniture", "Electronics", "Furniture", "Electronics", "Clothing"],
+    "Sales": [5000, 3000, 7000, 4500, 8000, 6000, 7500, 8500, 4000],
+    "Profit": [1200, 800, 2000, 900, 2500, 1500, 2200, 3000, 700],
+    "Units Sold": [50, 150, 20, 130, 25, 60, 30, 70, 120]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV
+df.to_csv("sales_data.csv", index=False)
+print("Dataset saved as sales_data.csv")
